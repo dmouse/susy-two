@@ -4,6 +4,8 @@
 @import "susy";
 @import "breakpoint";
 
+$debug: true;
+
 $susy: (
   columns: 12,
   gutters: .25,
@@ -18,7 +20,8 @@ $susy: (
   )
 );
 
-$debug: true;
+$map: 12 (60px 20px) split;
+
 @mixin debug(){
 	@if $debug {
 		@include show-grid(overlay);	

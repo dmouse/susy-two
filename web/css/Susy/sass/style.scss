@@ -38,11 +38,9 @@ body{
 }
 
 .container {
-
-	@include layout(12 (60px 20px) split);
+	@include layout($map);
 	width: span(12);
 	margin: 0 auto;
-
 	.header{
 		.servicios{
 			@include span(4 of 12);
@@ -60,7 +58,11 @@ body{
 				@include span(12 of 12);
 				
 			}
-			height: 50px;
+			
+			.gallery img{
+				@include gallery(4 of 12);
+			}
+
 			background: white;
 		}
 	}
@@ -94,13 +96,18 @@ body{
 
 		.sidebar-second {
 			@include span(12);
+			
 			@include breakpoint($breakpoint-mobile) {
 				@include span(6 of 12);
 				@include debug;
 			}
 
-			@include breakpoint($breakpoint-normal){
+			@include breakpoint($breakpoint-normal) {
 				@include span(3 at 10 of 12);
+			}
+
+			@include breakpoint( $breakpoint-wide) {
+				@include span(3 at 10 of 12);	
 			}
 
 			background: blue;

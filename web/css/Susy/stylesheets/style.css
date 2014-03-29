@@ -79,7 +79,7 @@ head:hover ~ .slider-images::before, head:hover ~ body .slider-images::before {
   width: 97.91667%;
   margin: 0 auto;
 }
-/* line 47, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 .container .header .servicios {
   width: 31.25%;
   float: left;
@@ -89,7 +89,7 @@ head:hover ~ .slider-images::before, head:hover ~ body .slider-images::before {
   background: grey;
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  /* line 47, ../sass/style.scss */
+  /* line 45, ../sass/style.scss */
   .container .header .servicios {
     width: 97.91667%;
     float: left;
@@ -97,17 +97,16 @@ head:hover ~ .slider-images::before, head:hover ~ body .slider-images::before {
     margin-right: 1.04167%;
   }
 }
-/* line 57, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 .container .header .slider {
   width: 64.58333%;
   float: left;
   margin-left: 1.04167%;
   margin-right: 1.04167%;
-  height: 50px;
   background: white;
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  /* line 57, ../sass/style.scss */
+  /* line 55, ../sass/style.scss */
   .container .header .slider {
     width: 97.91667%;
     float: left;
@@ -115,7 +114,30 @@ head:hover ~ .slider-images::before, head:hover ~ body .slider-images::before {
     margin-right: 1.04167%;
   }
 }
-/* line 68, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
+.container .header .slider .gallery img {
+  width: 31.25%;
+  float: left;
+}
+/* line 63, ../../../../../../../../../.gem/ruby/gems/susy-2.0.0/sass/susy/language/susy/_gallery.scss */
+.container .header .slider .gallery img:nth-child(3n + 1) {
+  margin-left: 1.04167%;
+  margin-right: -100%;
+  clear: both;
+}
+/* line 63, ../../../../../../../../../.gem/ruby/gems/susy-2.0.0/sass/susy/language/susy/_gallery.scss */
+.container .header .slider .gallery img:nth-child(3n + 2) {
+  margin-left: 34.375%;
+  margin-right: -100%;
+  clear: none;
+}
+/* line 63, ../../../../../../../../../.gem/ruby/gems/susy-2.0.0/sass/susy/language/susy/_gallery.scss */
+.container .header .slider .gallery img:nth-child(3n + 3) {
+  margin-left: 67.70833%;
+  margin-right: -100%;
+  clear: none;
+}
+/* line 70, ../sass/style.scss */
 .container .section {
   clear: both;
 }
@@ -138,7 +160,7 @@ head:hover ~ .container .section::before, head:hover ~ body .container .section:
   background-clip: content-box;
   background-position: left top;
 }
-/* line 72, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 .container .section .content {
   width: 47.91667%;
   float: left;
@@ -148,7 +170,7 @@ head:hover ~ .container .section::before, head:hover ~ body .container .section:
   height: 100px;
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  /* line 72, ../sass/style.scss */
+  /* line 74, ../sass/style.scss */
   .container .section .content {
     width: 97.91667%;
     float: left;
@@ -175,7 +197,7 @@ head:hover ~ .container .section::before, head:hover ~ body .container .section:
     background-position: left top;
   }
 }
-/* line 83, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 .container .section .sidebar-first {
   width: 22.91667%;
   float: left;
@@ -185,7 +207,7 @@ head:hover ~ .container .section::before, head:hover ~ body .container .section:
   height: 100px;
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  /* line 83, ../sass/style.scss */
+  /* line 85, ../sass/style.scss */
   .container .section .sidebar-first {
     width: 47.91667%;
     float: left;
@@ -193,7 +215,7 @@ head:hover ~ .container .section::before, head:hover ~ body .container .section:
     margin-right: 1.04167%;
   }
 }
-/* line 95, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 .container .section .sidebar-second {
   width: 97.91667%;
   float: left;
@@ -203,7 +225,7 @@ head:hover ~ .container .section::before, head:hover ~ body .container .section:
   height: 100px;
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  /* line 95, ../sass/style.scss */
+  /* line 97, ../sass/style.scss */
   .container .section .sidebar-second {
     width: 47.91667%;
     float: left;
@@ -231,7 +253,16 @@ head:hover ~ .container .section::before, head:hover ~ body .container .section:
   }
 }
 @media (min-width: 768px) and (max-width: 1280px) {
-  /* line 95, ../sass/style.scss */
+  /* line 97, ../sass/style.scss */
+  .container .section .sidebar-second {
+    width: 22.91667%;
+    float: left;
+    margin-left: 76.04167%;
+    margin-right: -100%;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 97, ../sass/style.scss */
   .container .section .sidebar-second {
     width: 22.91667%;
     float: left;
