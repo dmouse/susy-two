@@ -1,0 +1,30 @@
+// Screen
+// ======
+
+@import "grids";
+
+body{
+	
+	/**
+	 * Mobile
+	 */
+	@include breakpoint($breakpoint-mobile){
+		background: blue;
+	}
+	
+	/**
+	 * Normal
+	 */
+	@include breakpoint($breakpoint-normal){
+		background: pink;
+	}
+
+	/**
+	 * Wide
+	 */
+	@include breakpoint($breakpoint-wide){
+		background: yellow;
+	}
+
+	background:red;
+}
