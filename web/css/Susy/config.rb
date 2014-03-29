@@ -1,3 +1,4 @@
+require 'breakpoint'
 require 'susy'
 require 'compass/import-once/activate'
 # Require any additional compass plugins here.
@@ -25,3 +26,5 @@ javascripts_dir = "javascripts"
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+
+sass_options = {:debug_info => true}

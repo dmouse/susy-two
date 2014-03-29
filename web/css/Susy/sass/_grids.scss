@@ -4,10 +4,11 @@
 @import "susy";
 @import "breakpoint";
 
-$susy: (
-  columns: 12,
-  gutters: 1/4,
-);
 
-$ex-presidents: 600px 800px;
+//Breakpoints
+//variable            min         max
+$breakpoint-mobile: (320px) (max-width 480px);
+$breakpoint-normal: (768px) (max-width 960px);
+$breakpoint-wide: min-width 1024px;
 
+$breakpoint-mobile-iphone: (320px) (max-width 480px);

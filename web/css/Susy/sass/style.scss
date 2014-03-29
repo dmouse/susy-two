@@ -3,28 +3,93 @@
 
 @import "grids";
 
+$susy: (
+  columns: 12,
+  gutters: .25,
+  gutter-position: split,
+  math: fluid,
+  output: isolate,
+  debug: (
+    image: show-columns,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  )
+);
+
+
 body{
 	
 	/**
 	 * Mobile
 	 */
 	@include breakpoint($breakpoint-mobile){
-		background: blue;
+		
 	}
 	
 	/**
 	 * Normal
 	 */
 	@include breakpoint($breakpoint-normal){
-		background: pink;
+		
 	}
 
 	/**
 	 * Wide
 	 */
 	@include breakpoint($breakpoint-wide){
-		background: yellow;
+		
+	}
+	
+	@include container;
+	
+}
+
+.container {
+	@include layout(12 (60px 10px) split static);
+	
+	.header{
+		.servicios{
+			@include span(4 of 12);
+
+			// Mobile breakpoint 
+			@include breakpoint($breakpoint-mobile) {
+				@include span(12 of 12);
+			}
+			height: 50px;
+			background: grey;
+		}
+		.slider{
+			@include span(8 of 12);
+			@include breakpoint($breakpoint-mobile) {
+				@include span(12 of 12);
+				
+			}
+			height: 50px;
+			background: white;
+		}
 	}
 
-	background:red;
+	.section {
+		clear: both;
+		.sidebar-first {
+			@include span(3 of 12);
+			background: pink;
+			height: 100px;
+		}
+
+		.content {
+			@include span(6 of 12);
+			background: yellow;
+			height: 100px;
+		}
+
+		.sidebar-second {
+			@include span(3 of 12);
+			background: blue;
+			height: 100px;
+		}
+	}
+
 }
+
