@@ -3,27 +3,6 @@
 
 @import "grids";
 
-$susy: (
-  columns: 12,
-  gutters: .25,
-  gutter-position: split,
-  math: fluid,
-  output: isolate,
-  debug: (
-    image: show-columns,
-    color: rgba(#66f, .25),
-    output: background,
-    toggle: top right,
-  )
-);
-
-$debug: true;
-@mixin debug(){
-	@if $debug {
-		@include show-grid(overlay);	
-	}
-}
-
 body{
 	
 	/**
@@ -91,7 +70,6 @@ body{
 		@include debug;
 
 		.content {
-			
 			@include susy-breakpoint($breakpoint-mobile, 12) {
 				@include span(12);
 				@include debug;

@@ -4,10 +4,29 @@
 @import "susy";
 @import "breakpoint";
 
+$susy: (
+  columns: 12,
+  gutters: .25,
+  gutter-position: split,
+  math: fluid,
+  output: isolate,
+  debug: (
+    image: show-columns,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  )
+);
+
+$debug: true;
+@mixin debug(){
+	@if $debug {
+		@include show-grid(overlay);	
+	}
+}
 
 //Breakpoints
 //variable            min         max
 $breakpoint-mobile: (320px) (max-width 480px);
 $breakpoint-normal: (768px) (max-width 1280px);
-$breakpoint-wide: min-width 1280px;
-$breakpoint-mobile-iphone: (320px) (max-width 480px);
+$breakpoint-wide: (1280px);
