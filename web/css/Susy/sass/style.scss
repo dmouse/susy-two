@@ -17,6 +17,12 @@ $susy: (
   )
 );
 
+$debug: true;
+@mixin debug(){
+	@if $debug {
+		@include show-grid(overlay);	
+	}
+}
 
 body{
 	
@@ -40,14 +46,24 @@ body{
 	@include breakpoint($breakpoint-wide){
 		
 	}
-	
+
 	@include container;
+}
+
+.slider-images {
+	@include layout(16 (60px 20px) split);
+	@include debug;
 	
+	background: pink;
+	height:100px;
 }
 
 .container {
-	@include layout(12 (60px 10px) split static);
-	
+
+	@include layout(12 (60px 20px) split);
+	width: span(12);
+	margin: 0 auto;
+
 	.header{
 		.servicios{
 			@include span(4 of 12);
@@ -71,25 +87,47 @@ body{
 	}
 
 	.section {
-		clear: both;
-		.sidebar-first {
-			@include span(3 of 12);
-			background: pink;
-			height: 100px;
-		}
+		@include break;
+		@include debug;
 
 		.content {
-			@include span(6 of 12);
+			
+			@include susy-breakpoint($breakpoint-mobile, 12) {
+				@include span(12);
+				@include debug;
+			}
+
+			@include span(6 at 4 of 12);
 			background: yellow;
 			height: 100px;
 		}
 
+		.sidebar-first {
+			@include span(3 at 1 of 12);
+
+			// Mobile breakpoint
+			@include breakpoint($breakpoint-mobile) {
+				@include span(6 of 12);
+			}
+
+			background: pink;
+			height: 100px;
+		}
+
 		.sidebar-second {
-			@include span(3 of 12);
+			@include span(12);
+			@include breakpoint($breakpoint-mobile) {
+				@include span(6 of 12);
+				@include debug;
+			}
+
+			@include breakpoint($breakpoint-normal){
+				@include span(3 at 10 of 12);
+			}
+
 			background: blue;
 			height: 100px;
 		}
 	}
-
 }
 

@@ -8,7 +8,6 @@
 //Breakpoints
 //variable            min         max
 $breakpoint-mobile: (320px) (max-width 480px);
-$breakpoint-normal: (768px) (max-width 960px);
-$breakpoint-wide: min-width 1024px;
-
+$breakpoint-normal: (768px) (max-width 1280px);
+$breakpoint-wide: min-width 1280px;
 $breakpoint-mobile-iphone: (320px) (max-width 480px);

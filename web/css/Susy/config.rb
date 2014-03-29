@@ -27,4 +27,4 @@ javascripts_dir = "javascripts"
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 
-sass_options = {:debug_info => true}
+#sass_options = {:debug_info => true}
