@@ -12,3 +12,25 @@ $ cd susy-two
 $ composer install
 
 ```
+
+Development
+========
+
+```bash
+$ cd web/css/Susy
+$ compass compile
+$ compass watch
+
+```
+
+Requirements
+========
+
+* Sass
+* Compass
+* Breakpoint
+* Susy
+
+```bash 
+$ gem install sass compass breakpoint susy
+```
